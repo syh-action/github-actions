@@ -8,6 +8,6 @@ jobs:
     - name: github context
       run: echo '${{ toJSON(github) }}'
     - name: check github context
-      run:
+      run: |
         echo ${{ github.repository }}
         echo ${{ github.event_name }}
