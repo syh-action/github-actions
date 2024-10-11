@@ -5,7 +5,7 @@ jobs:
   create-output:
     runs-on: ubuntu-latest
     outputs:
-      testV2: ${{ steps.check-output.outputs.test }}
+      testV2: ${{ steps.check-output.outputs.testV1 }}
     steps:
     - name: echo output
       id: check-output
@@ -13,7 +13,7 @@ jobs:
         echo "testV1=hello" >> $GITHUB_OUTPUT
     - name: check output
       run: |
-        echo ${{ steps.check-output.outputs.test }}
+        echo ${{ steps.check-output.outputs.testV1 }}
     
   get-output:
     needs: [create-output]
