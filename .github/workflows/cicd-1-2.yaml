@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    if: github.event. action == 'openes'
+    if: github.event.action == 'openes'
     runs-on: ubuntu-latest
     steps:
     - name: checkout the code
